@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<schema version="0.3">
+   <table name="atCoreCommerceProductAdjustmentSelectStockControlledOptions">
+    <field name="ID" type="I" size="10">
+      <KEY/>
+      <UNSIGNED />
+      <AUTOINCREMENT />
+    </field>
+    <field name="akID" type="I" size="10">
+      <UNSIGNED />
+    </field>
+    <field name="value" type="C" size="255" />
+    <field name="displayOrder" type="I" size="10">
+      <UNSIGNED />
+    </field>
+    <field name="isEndUserAdded" type="I1" size="1">
+      <NOTNULL/>
+      <DEFAULT value="0"/>
+    </field>
+    <field name="adjustmentValue" type="N" size="14.2"/>
+    <field name="stockLevel" type="I" size="10"/>
+    
+  </table>
+</schema>
