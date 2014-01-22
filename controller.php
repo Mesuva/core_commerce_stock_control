@@ -5,7 +5,7 @@ class CoreCommerceStockControlPackage extends Package {
 
 	protected $pkgHandle = 'core_commerce_stock_control';
 	protected $appVersionRequired = '5.5.1.2';
-	protected $pkgVersion = '0.96';
+	protected $pkgVersion = '1.0';
 	
 	public function getPackageDescription() {
 		return t("A product attribute to manage stock levels");

@@ -4,7 +4,7 @@ class StockLevelUpdater Extends Model{
 		Loader::model('attribute/categories/core_commerce_product_option','core_commerce');
 		
 		$db = Loader::db();
-		$order  = $order->getProducts();
+		$orderproducts  = $order->getProducts();
 		 
 		   $pkg = Package::getByHandle('core_commerce');
 			if ($pkg->config('MANAGE_INVENTORY') == 1) {
@@ -13,8 +13,8 @@ class StockLevelUpdater Extends Model{
 				|| ($pkg->config('MANAGE_INVENTORY_TRIGGER') == 'FINISHED')
 				) {
 					 
-					 if(is_array($order) && count($order)) {
-					 	foreach($order as $p) {
+					 if(is_array($orderproducts) && count($orderproducts)) {
+					 	foreach($orderproducts as $p) {
 					 		$opID = $p->getOrderProductID();
 					 		$pID = $p->getProductID();
 					 		
